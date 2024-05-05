@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Repositories List</title>
+</head>
+<body>
+<ul>
+  <li th:each="repo : ${repositories}" th:text="${repo.name}">
+    <span th:if="${repo.highlight}" th:text=" (contains 'Hello')"> (contains 'Hello')</span>
+  </li>
+</ul>
+</body>
+</html>
